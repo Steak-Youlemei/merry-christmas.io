@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>是会会呀</title>
+    <link href="css/zzsc.css" rel="stylesheet" type="text/css" />
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <link href="css/base.css" rel="stylesheet" type="text/css" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .g-body{
+            margin-top: -400px;
+        }
+
+        #react {
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            transform-style: preserve-3d;
+            animation: rotate 20s infinite;
+            animation-timing-function: linear;
+        }
+
+        #react div {
+            position: absolute;
+            transition: all .4s;
+        }
+
+        div .out_pic {
+            width: 200px;
+            height: 200px;
+            opacity: 0.9;
+        }
+
+        div .in_pic {
+            width: 100px;
+            height: 100px;
+        }
+
+        #react span {
+            display: block;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 50px;
+            left: 50px;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+
+            to {
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+
+
+        .out_front {
+            transform: translateZ(100px);
+        }
+
+        .out_back {
+            transform: translateZ(-100px);
+        }
+
+        .out_left {
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        .out_right {
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+
+        .out_top {
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        .out_bottom {
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+
+        .in_front {
+            transform: translateZ(50px);
+        }
+
+        .in_back {
+            transform: translateZ(-50px);
+        }
+
+        .in_left {
+            transform: rotateY(90deg) translateZ(50px);
+        }
+
+        .in_right {
+            transform: rotateY(-90deg) translateZ(50px);
+        }
+
+        .in_top {
+            transform: rotateX(90deg) translateZ(50px);
+        }
+
+        .in_bottom {
+            transform: rotateX(-90deg) translateZ(50px);
+        }
+
+        /*外面的图片散开*/
+        #react:hover .out_front {
+            transform: translateZ(200px);
+        }
+
+        #react:hover .out_back {
+            transform: translateZ(-200px);
+        }
+
+        #react:hover .out_left {
+            transform: rotateY(90deg) translateZ(200px);
+        }
+
+        #react:hover .out_right {
+            transform: rotateY(-90deg) translateZ(200px);
+        }
+
+        #react:hover .out_top {
+            transform: rotateX(90deg) translateZ(200px);
+        }
+
+        #react:hover .out_bottom {
+            transform: rotateX(-90deg) translateZ(200px);
+        }
+
+
+        /*里面的图片散开*/
+        #react:hover .in_front {
+            transform: translateZ(100px);
+        }
+
+        #react:hover .in_back {
+            transform: translateZ(-100px);
+        }
+
+        #react:hover .in_left {
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        #react:hover .in_right {
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+
+        #react:hover .in_top {
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        #react:hover .in_bottom {
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+    </style>
+
+</head>
+
+<body>
+<div class="g-body">
+    <div style="text-align:center;padding:350px 0 20px 0">
+        <div id="react">
+            <div class="out_front">
+                <img src="img/a0.jpg" class="out_pic">
+            </div>
+            <div class="out_back">
+                <img src="img/a1.jpg" class="out_pic">
+            </div>
+            <div class="out_left">
+                <img src="img/a2.jpg" class="out_pic">
+            </div>
+            <div class="out_right">
+                <img src="img/a3.jpg" class="out_pic">
+            </div>
+            <div class="out_top">
+                <img src="img/a4.jpg" class="out_pic">
+            </div>
+            <div class="out_bottom">
+                <img src="img/a5.jpg" class="out_pic">
+            </div>
+            <span class="in_front">
+                <img src="img/a6.jpg" class="in_pic">
+            </span>
+            <span class="in_back">
+                <img src="img/a7.jpg" class="in_pic">
+            </span>
+            <span class="in_left">
+                <img src="img/a8.jpg" class="in_pic">
+            </span>
+            <span class="in_right">
+                <img src="img/a9.jpg" class="in_pic">
+            </span>
+            <span class="in_top">
+                <img src="img/a10.jpg" class="in_pic">
+            </span>
+            <span class="in_bottom">
+                <img src="img/a1.jpg" class="in_pic">
+            </span>
+        </div>
+    </div>
+</div>
+<canvas id="snowFallTop" class="snowFall snowFallTop" width="1220" height="162" style="left: 321px;"></canvas>
+<canvas id="snowFallLeft" class="snowFall snowFallLeft" width="321" height="742" style="width: 321px;"></canvas>
+<canvas id="snowFallRight" class="snowFall snowFallRight" width="321" height="742" style="width: 321px;"></canvas>
+
+<script type="text/javascript" src="js/snow.min.js"></script>
+</body>
+
+</html>
